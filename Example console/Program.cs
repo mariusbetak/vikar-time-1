@@ -1,29 +1,56 @@
-﻿﻿// See https://aka.ms/new-console-template for more information
-// Console.WriteLine("2Z er den bedste klasse nogensinde");
+﻿﻿using System;
+using System.Xml.Schema;
 
-/*Datatypes: int, float, string, bool
-int are whole numbers (-5, 6 , 57894132)
-float decimal numbers
-string is Text in ""
-*/
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter student Roll Number:");
+        int rollNumber = int.Parse(Console.ReadLine()!);
 
-// int x; //Declared x
-// x = 4; //Instansiated x
+        Console.WriteLine("Enter the Name of the Student:");
+        string name = Console.ReadLine()!;
 
-// int y = 5, z = 6; //Declared and instansiated y and z
+        Console.WriteLine("Enter the Marks for Physics:");
+        int physicsMarks = int.Parse(Console.ReadLine()!);
 
-// Console.WriteLine("x is " + x + " y is " + y + " z is " + z);
+        Console.WriteLine("Enter the Marks for Chemistry:");
+        int chemistryMarks = int.Parse(Console.ReadLine()!);
 
-// float d = 5.5f;
+        Console.WriteLine("Enter the Marks for Computer Application:");
+        int computerMarks = int.Parse(Console.ReadLine()!);
 
-// Console.WriteLine(d + x - z / y * d % x);
+        int total = physicsMarks + chemistryMarks + computerMarks;
+        int per = (total) / 3;
+        if (per >= 80)
+        {
+            Console.WriteLine("First Division");
+        }
+        else if (per  >= 50 && per < 60)
+        {
+            Console.WriteLine("Second Division");
+        }
+        else if (per >= 40 && per < 50)
+        {
+            Console.WriteLine("pass");
+        }
+        else
+        {
+            Console.WriteLine("Fail");
+        }
 
-// int e = Convert.ToInt16(d);
 
-// Console.WriteLine("float to int " + e);
+        Console.WriteLine("Roll Number: " + rollNumber);
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Physics Marks: " + physicsMarks);
+        Console.WriteLine("Chemistry Marks: " + chemistryMarks);
+        Console.WriteLine("Computer Application Marks: " + computerMarks);
+        Console.WriteLine("the total marks is: " + (total));
+        Console.WriteLine("the percentage is: " + per + "%");
+         Console.WriteLine("division: " + per );
 
 
-string str = "I am a string" + "\nAnd so am I";
 
-Console.WriteLine(str);
-
+        
+    }
+}
