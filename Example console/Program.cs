@@ -5,52 +5,35 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Enter student Roll Number:");
-        int rollNumber = int.Parse(Console.ReadLine()!);
 
-        Console.WriteLine("Enter the Name of the Student:");
-        string name = Console.ReadLine()!;
+        Console.WriteLine("Enter number");
+        int i = int.Parse(Console.ReadLine()!);
 
-        Console.WriteLine("Enter the Marks for Physics:");
-        int physicsMarks = int.Parse(Console.ReadLine()!);
-
-        Console.WriteLine("Enter the Marks for Chemistry:");
-        int chemistryMarks = int.Parse(Console.ReadLine()!);
-
-        Console.WriteLine("Enter the Marks for Computer Application:");
-        int computerMarks = int.Parse(Console.ReadLine()!);
-
-        int total = physicsMarks + chemistryMarks + computerMarks;
-        int per = (total) / 3;
-        if (per >= 80)
+        if (i > 0)
         {
-            Console.WriteLine("First Division");
-        }
-        else if (per  >= 50 && per < 60)
-        {
-            Console.WriteLine("Second Division");
-        }
-        else if (per >= 40 && per < 50)
-        {
-            Console.WriteLine("pass");
+            int c = 10;
+            int a = i + c;
+
+            for (int N1 = i; N1 <= a; N1++)
+                Console.WriteLine(N1);
         }
         else
         {
-            Console.WriteLine("Fail");
+            int c = -10;
+            int a = i + c;
+
+            for (int N1 = i; N1 >= a; N1--)
+                Console.WriteLine(N1);
+
         }
 
 
-        Console.WriteLine("Roll Number: " + rollNumber);
-        Console.WriteLine("Name: " + name);
-        Console.WriteLine("Physics Marks: " + physicsMarks);
-        Console.WriteLine("Chemistry Marks: " + chemistryMarks);
-        Console.WriteLine("Computer Application Marks: " + computerMarks);
-        Console.WriteLine("the total marks is: " + (total));
-        Console.WriteLine("the percentage is: " + per + "%");
-         Console.WriteLine("division: " + per );
 
 
 
-        
+
+
+
+
     }
 }
