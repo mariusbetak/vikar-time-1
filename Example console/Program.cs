@@ -1,39 +1,22 @@
-﻿﻿using System;
-using System.Xml.Schema;
-
-class Program
+﻿﻿public class Program
 {
-    static void Main()
+    public static void Main()
     {
-
-        Console.WriteLine("Enter number");
-        int i = int.Parse(Console.ReadLine()!);
-
-        if (i > 0)
-        {
-            int c = 10;
-            int a = i + c;
-
-            for (int N1 = i; N1 <= a; N1++)
-                Console.WriteLine(N1);
-        }
-        else
-        {
-            int c = -10;
-            int a = i + c;
-
-            for (int N1 = i; N1 >= a; N1--)
-                Console.WriteLine(N1);
-
-        }
-
-
-
-
-
-
-
-
-
+        goodbeyworld("jeff");
+        helloworld("bob", 2);
+        noworld(1, 2, 3);
     }
+    public static void goodbeyworld(string name)
+    {
+        Console.WriteLine($"hello and goodbey {name}");
+    }
+    public static void helloworld(string name, int cats)
+    {
+        Console.WriteLine($"hello world i have {cats} cats and my name is {name}");
+    }
+    public static void noworld(int counting, int counting2, int counting3)
+    {
+        Console.WriteLine($"i have {counting3} fish, {counting} dog and {counting2} cats.");
+    }
+
 }
